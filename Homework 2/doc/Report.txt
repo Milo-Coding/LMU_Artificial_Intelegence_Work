@@ -1,0 +1,68 @@
+Without having to look up the PC Structure Learning algorithm, examine and then explain why structure discovery algorithms
+MIGHT be able to orient the direction of some edges, but not others.
+
+Structure discovery algorithms often rely on conditional independence tests to determine the presence
+or absence of edges between nodes. If two variables are conditionally independent given a third variable,
+the algorithm can sometimes orient those edges but not always. E.g., in a chain A -> H -> I, A and I are
+dependent, they just become independent once you know H.
+
+
+
+Using the pgmpy query example, determine the answers to the queries specified in the instructions.
+
+P(W)
++------+----------+
+| W    |   phi(W) |
++======+==========+
+| W(0) |   0.3013 |
++------+----------+
+| W(1) |   0.6987 |
++------+----------+
+
+P(X | W=1)
++------+----------+
+| X    |   phi(X) |
++======+==========+
+| X(0) |   0.3963 |
++------+----------+
+| X(1) |   0.6037 |
++------+----------+
+
+P(Z | W=0, do(X=0))
++------+----------+
+| Z    |   phi(Z) |
++======+==========+
+| Z(0) |   0.3186 |
++------+----------+
+| Z(1) |   0.6814 |
++------+----------+
+
+P(Z | W=0, do(X=0)) = 0.31858794229568627
+
+
+
+If Facebook charges you $2 per-person to learn their stance on Gun control, if available, is
+the juice worth the squeeze?
+
+Yes. This would be an increadibly good deal since the VPI of learning thier stance on gun
+control tells us that info is worth more thatn $20
+
+If you *knew* someone to be in support of Gun Control (𝐺=1), and Google is offering $0.25
+per person to tell you their political affiliation, is the juice worth the squeeze?
+
+No. There is no value to laerning someones political affiliation once we know they support
+gun control: VPI(P | G=1) = 0
+
+Finally (scratching some flag requirement for this course, probably): In a small paragraph,
+argue for whether or not you believe this practice should be considered ethical, especially
+if each individual's characteristics were collected via social media. Compare this practice
+to targeted political advertising wherein ads are curated based on perceived in-group.
+
+I do not believe this practice is ethical. A company using technology to target indeviduals
+vulnerable to thier advertisments either to sell some product or influence thier decisions
+inharently takes advantage of that person. I don't mean that all advertisements are 
+unethical, the purpose of advertising is to alert people to the existance of something, it's
+only when those advertisements are targeted and used to manipulate people, especially people
+who have been determined to be vulnerable to such ads, that it becomes unethical. If these
+algorithms were used to determine people who wouod benefit from owning a defendotron instead 
+of those likely to spend the most money on one, it would be far more ethical.
